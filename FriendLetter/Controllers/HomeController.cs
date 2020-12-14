@@ -19,5 +19,7 @@ namespace FriendLetter.Controllers
       myLetterVariable.Sender = "Svea";
       return View(myLetterVariable); 
     }
+    [Route("/form")]
+    public ActionResult Form() { return View(); }
   }
 }
