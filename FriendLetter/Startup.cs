@@ -8,6 +8,7 @@ namespace FriendLetter
 {
   public class Startup
   {
+
     public Startup(IHostingEnvironment env)
     {
       var builder = new ConfigurationBuilder()
@@ -27,15 +28,15 @@ namespace FriendLetter
     {
       app.UseMvc(routes =>
       {
-        routes.MapRoute(
-          name: "default",
-          template: "{controller=Home}/{action=Index}/{id?}");
+          routes.MapRoute(
+              name: "default",
+              template: "{controller=Home}/{action=Index}/{id?}");
       });
-
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Hello World!");
+          await context.Response.WriteAsync("Hello World!");
       });
+
     }
   }
 }
